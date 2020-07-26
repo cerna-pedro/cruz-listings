@@ -1,59 +1,41 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
-import { graphql} from 'gatsby'
-import Layout from '../components/Layout'
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import { graphql } from 'gatsby';
+import Layout from '../components/Layout';
 
-
-export const ListingTemplate = ({
-  description,
-  title,
-  helmet,
-}) => {
-
+export const ListingTemplate = ({ description, title, helmet }) => {
   return (
-    <section >
+    <section>
       {helmet || ''}
-      <div >
-        <div >
-          <div >
-            <h1 >
-              {title}
-            </h1>
-            <p>{description}</p>
-
-
-          </div>
-        </div>
-      </div>
+      <h1>{title}</h1>
+      <p>{description}</p>
+      <p>This is the template</p>
     </section>
-  )
-}
-
-
+  );
+};
 
 const Listing = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { markdownRemark: listing } = data;
   return (
     <Layout>
       <ListingTemplate
-        description={post.frontmatter.description}
+        description={listing.frontmatter.description}
         helmet={
-          <Helmet titleTemplate="%s | Blog">
-            <title>{`${post.frontmatter.title}`}</title>
+          <Helmet titleTemplate='%s | Blog'>
+            <title>{`${listing.frontmatter.title}`}</title>
             <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
+              name='description'
+              content={`${listing.frontmatter.description}`}
             />
           </Helmet>
         }
-        title={post.frontmatter.title}
+        title={listing.frontmatter.title}
       />
     </Layout>
-  )
-}
+  );
+};
 
-
-export default Listing
+export default Listing;
 
 export const pageQuery = graphql`
   query ListingByID($id: String!) {
@@ -67,4 +49,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
