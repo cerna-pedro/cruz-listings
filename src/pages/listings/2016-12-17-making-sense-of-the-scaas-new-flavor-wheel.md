@@ -1,5 +1,4 @@
 ---
-templateKey: listing
 title: Bridgeland
 date: 2019-12-17T15:04:10.000Z
 featuredimage: /img/flavor_wheel.jpg
