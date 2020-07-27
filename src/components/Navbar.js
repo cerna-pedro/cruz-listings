@@ -1,11 +1,16 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'gatsby';
 
 const Navbar = () => {
   return (
-    <div>
-      This is the Navbar
-    </div>
-  )
-}
+    <header>
+      <nav>
+        <p>
+          <Link to='/'>HOME</Link>
+        </p>
+      </nav>
+    </header>
+  );
+};
 
-export default Navbar
+export default Navbar;

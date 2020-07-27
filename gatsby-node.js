@@ -25,9 +25,9 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    const posts = result.data.allMarkdownRemark.edges
+    const listings = result.data.allMarkdownRemark.edges
 
-    posts.forEach((edge) => {
+    listings.forEach((edge) => {
       const id = edge.node.id
       createPage({
         path: edge.node.fields.slug,
