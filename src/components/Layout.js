@@ -10,7 +10,7 @@ import './layout.css'
 const Layout = ({ children }) => {
   const { title, description } = useSiteMetadata()
   return (
-    <div>
+    <div className="container">
       <Helmet>
         <html lang="en" />
         <title>{title}</title>

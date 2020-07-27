@@ -6,7 +6,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query ListingQuery {
-      allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___date] }) {
         edges {
           node {
             id
@@ -18,7 +18,7 @@ const IndexPage = () => {
               date(formatString: "MMMM DD, YYYY")
               featuredimage {
                 childImageSharp {
-                  fluid(maxWidth: 120, quality: 100) {
+                  fluid(maxWidth: 2400, quality: 100) {
                     ...GatsbyImageSharpFluid
                   }
                 }
@@ -31,6 +31,7 @@ const IndexPage = () => {
     }
   `);
   console.log(data.allMarkdownRemark.edges);
+  console.log(data.allMarkdownRemark.edges[0].node.frontmatter.featuredimage.childImageSharp.fluid);
   return (
     <Layout>
       <ul>
