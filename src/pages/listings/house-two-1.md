@@ -1,7 +1,7 @@
 ---
 templateKey: listing
-title: House Two
-date: 2020-07-28T17:22:32.302Z
+title: House Three
+date: 2020-07-28T17:23:05.922Z
 description: Home in Houston, TX.
 status: Just Leased
 featuredimage: /img/three.jpg
