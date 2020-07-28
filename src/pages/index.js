@@ -31,18 +31,26 @@ const IndexPage = () => {
     }
   `);
   console.log(data.allMarkdownRemark.edges);
-  console.log(data.allMarkdownRemark.edges[0].node.frontmatter.featuredimage.childImageSharp.fluid);
+  console.log(
+    data.allMarkdownRemark.edges[0].node.frontmatter.featuredimage
+      .childImageSharp.fluid
+  );
   return (
     <Layout>
-      <ul>
-        {data.allMarkdownRemark.edges.map((item,i) => {
-          return (
-            <li key={i}>
-              <Link to={item.node.fields.slug}> {item.node.frontmatter.title}</Link>
-            </li>
-          );
-        })}
-      </ul>
+      <section>
+        <ul>
+          {data.allMarkdownRemark.edges.map((item, i) => {
+            return (
+              <li key={i}>
+                <Link to={item.node.fields.slug}>
+                  {' '}
+                  {item.node.frontmatter.title}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
     </Layout>
   );
 };

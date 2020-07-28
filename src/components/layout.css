@@ -40,7 +40,7 @@
 html {
   font-family: Arial, Helvetica, sans-serif;
   font-family: 'Amiko';
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   text-size-adjust: 100%;
 }
@@ -53,19 +53,90 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+
 .container {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 main {
   flex: 1 0 auto;
-  max-width: 1100px;
+  display: flex;
 }
 
-.top,.bottom {
-  padding:1rem;
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.middle {
+  flex: 1;
+  position: relative;
+}
+.middle > div {
+  position: relative;
+  z-index: -1000;
+  min-height: 100%;
+}
+
+.middle span {
+  position: absolute;
+  z-index: 1000;
+  font-size: 4rem;
+  bottom: 65%;
+  left: 5%;
+  transform: rotate(-15deg);
+  color: var(--white);
+  text-shadow: 0px 0px 5px var(--blue);
+  background-color: rgba(0, 0, 0, 0.4);
+  font-weight: 900;
+  border: 10px groove var(--blue);
+  border-radius: 1rem;
+  box-shadow: 3px 3px 30px var(--pink);
+  padding: 0.5rem;
+}
+
+.top,
+.bottom {
+  padding: 1rem;
+  display: flex;
+  height: 3in;
+  background-image: linear-gradient(45deg, var(--white) 60%, var(--brand) 80%);
+  align-items: center;
+}
+
+.top div.gatsby-image-wrapper {
+  align-self: flex-end;
+}
+
+.top {
+  padding-bottom: 0;
+}
+
+.info,
+.house-info {
+  margin-left: 2rem;
+  font-weight: 700;
+  padding-bottom: 1.5rem;
+}
+
+.link a {
+  background-image: none;
+}
+
+.bottom {
+  /* flex-direction: column; */
 }
 
 a {
@@ -82,9 +153,16 @@ a:hover {
 }
 
 @media print {
-  main {
-    padding: 0;
+  @page {
+    size: 14in 14in;
+    margin: 0 !important;
+    padding: 0 !important;
   }
+
+  .middle {
+    max-height: 8in;
+  }
+
   header {
     display: none;
   }

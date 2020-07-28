@@ -3,8 +3,8 @@ import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Img from 'gatsby-image';
-import cruz from '../img/cruz.jpg';
-import dimas from '../img/dimas.jpg';
+import Cruz from '../components/Cruz';
+import Logo from '../components/Logo';
 
 // TODO make PNGs out of dimas and cruz
 // TODO use gatsby image instead of img tags
@@ -21,30 +21,36 @@ export const ListingTemplate = ({
     <section>
       {helmet || ''}
       <div className='top'>
-        <img src={cruz} alt='Jason Cruz, Realtor' />
-        <h2>Jason Cruz</h2>
-        <h3>Realtor</h3>
-        <span>
-          <a href='tel:+1-832-768-0058'>832.768.0058</a>
-        </span>
-        <p>
-          <a
-            href='https://markdimas.com/'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            MARKDIMAS.COM
-          </a>
-        </p>
+        <Cruz />
+        <div className='info'>
+          <h1>Jason Cruz</h1>
+          <p>Realtor</p>
+          <span className='link'>
+            <a href='tel:+1-832-768-0058'>832.768.0058</a>
+          </span>
+          <p className='link'>
+            <a
+              href='https://markdimas.com/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              MARKDIMAS.COM
+            </a>
+          </p>
+        </div>
       </div>
       <div className='middle'>
         <Img fluid={img} />
+        <span>{status.toUpperCase()}</span>
       </div>
       <div className='bottom'>
-        <h1>{title}</h1>
-        <p>{status}</p>
+        <Logo />
+        <div className="house-info">
+
+        <h2>{title}</h2>
         <p>{description}</p>
-        <img src={dimas} alt='Mark Dimas Properties Logo' />
+        </div>
+
       </div>
     </section>
   );
@@ -88,8 +94,9 @@ export const pageQuery = graphql`
         status
         featuredimage {
           childImageSharp {
-            fluid(maxWidth: 2400, quality: 100) {
+            fluid(maxWidth: 4000, quality: 100) {
               ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluidLimitPresentationSize
             }
           }
         }
