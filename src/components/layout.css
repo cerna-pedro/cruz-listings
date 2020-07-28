@@ -1,18 +1,12 @@
 :root {
   --brand: rgb(141, 128, 113);
-  --blue: #61dafb;
-  --black: rgb(41, 41, 41);
-  --orange: #ffb39f;
-  --red: #ff3015;
-  --pink: #ff779b;
-  --green: #5ecdc7;
-  --purple: #6972d9;
-  --dark-purple: #5000ff;
-  --gray: rgb(95, 95, 95);
   --white: rgb(255, 255, 255);
+  --black: rgb(41, 41, 41);
+  --red: rgb(255, 109, 89);
+  --link: rgb(104, 153, 202);
+  --bg-white: rgba(255,255,255,.5);
   --bg: var(--white);
   --text: var(--black);
-  --link: var(--green);
 }
 
 * {
