@@ -1,11 +1,11 @@
 ---
 templateKey: listing
-title: House Two
-date: 2020-07-28T17:14:44.069Z
-description: House in Sugar Land, Tx
-status: Just Sold
-featuredimage: /img/two.jpg
+title: House Three
+date: 2020-07-28T17:16:57.148Z
+description: House in Houston, Tx
+status: Just Leased
+featuredimage: /img/three.jpg
 ---
-Beautiful 2-story home in Sugar Land, TX.
+Beautiful 3-story home in Houston, TX.
 
-Representing the seller.
+Representing the buyer.
