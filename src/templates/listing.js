@@ -7,6 +7,7 @@ import Cruz from '../components/Cruz';
 import Logo from '../components/Logo';
 
 export const ListingTemplate = ({
+  content,
   description,
   title,
   helmet,
@@ -36,12 +37,12 @@ export const ListingTemplate = ({
         </div>
       </div>
       <div className='middle'>
-        <Img fluid={img} />
+        <Img fluid={img} alt={content} />
         <span>{status.toUpperCase()}</span>
       </div>
       <div className='bottom'>
         <h2>{title}</h2>
-        <p dangerouslySetInnerHTML={{__html:description}}/>
+        <p dangerouslySetInnerHTML={{ __html: description }} />
         <Logo />
       </div>
     </section>
