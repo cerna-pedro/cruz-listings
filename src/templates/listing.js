@@ -47,7 +47,8 @@ export const ListingTemplate = ({
 
 
         <h2>{title}</h2>
-        <p>{description}</p>
+        <span dangerouslySetInnerHTML={{__html:description}}/>
+
         <Logo />
 
 
@@ -62,7 +63,7 @@ const Listing = ({ data }) => {
   return (
     <Layout>
       <ListingTemplate
-        description={listing.frontmatter.description}
+        description={listing.html}
         helmet={
           <Helmet titleTemplate='%s | Blog'>
             <title>{`${listing.frontmatter.title}`}</title>

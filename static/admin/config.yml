@@ -23,6 +23,7 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "listing"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
       - {label: "Status", name: "status", widget: "text", default: "Just Listed"}
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
