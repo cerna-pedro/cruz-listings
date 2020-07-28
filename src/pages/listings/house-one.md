@@ -1,11 +1,11 @@
 ---
 templateKey: listing
-title: House One
+title: House Two
 date: 2020-07-28T17:14:44.069Z
-description: House in Pearland, Tx
-status: Just Listed
-featuredimage: /img/one.jpg
+description: House in Sugar Land, Tx
+status: Just Sold
+featuredimage: /img/two.jpg
 ---
-Beautiful 1-story home in Pearland, TX.
+Beautiful 2-story home in Sugar Land, TX.
 
-Representing the buyer.
+Representing the seller.
