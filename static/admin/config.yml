@@ -25,5 +25,5 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Status", name: "status", widget: "text", default: "Just Listed"}
       - {label: "Featured Image", name: "featuredimage", widget: image}
-      - {label: "Description", name: "description", widget: "markdown"}
+      - {label: "Body", name: "body", widget: "markdown"}
 
