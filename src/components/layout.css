@@ -4,7 +4,7 @@
   --black: rgb(41, 41, 41);
   --red: rgb(255, 109, 89);
   --link: rgb(104, 153, 202);
-  --bg-white: rgba(255,255,255,.5);
+  --bg-white: rgba(255, 255, 255, 0.5);
   --bg: var(--white);
   --text: var(--black);
 }
@@ -57,9 +57,10 @@ h3 {
   font-size: 1.5rem;
 }
 
-p,span{
+p,
+span {
   font-size: 1.4rem;
-  padding: .4rem 0;
+  padding: 0.4rem 0;
 }
 
 .container {
@@ -73,7 +74,7 @@ main {
   display: flex;
 }
 
-ul{
+ul {
   padding-left: 2rem;
 }
 
@@ -137,7 +138,6 @@ section {
 
 .link a {
   background-image: none;
-
 }
 
 .bottom {
@@ -146,9 +146,9 @@ section {
   align-items: flex-start;
 }
 
-.bottom div{
+.bottom div {
   position: absolute !important;
-  bottom:10%;
+  bottom: 10%;
 }
 
 a {
@@ -176,9 +176,6 @@ a:hover {
   }
 
   header {
-    display: none;
-  }
-  footer {
     display: none;
   }
 }

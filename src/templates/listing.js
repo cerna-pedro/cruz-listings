@@ -6,10 +6,6 @@ import Img from 'gatsby-image';
 import Cruz from '../components/Cruz';
 import Logo from '../components/Logo';
 
-// TODO make PNGs out of dimas and cruz
-// TODO use gatsby image instead of img tags
-// TODO add background gradient with brand colors instead
-
 export const ListingTemplate = ({
   description,
   title,
@@ -25,9 +21,9 @@ export const ListingTemplate = ({
         <div className='info'>
           <h1>Jason Cruz</h1>
           <p>Realtor</p>
-          <span className='link'>
+          <p className='link'>
             <a href='tel:+1-832-768-0058'>832.768.0058</a>
-          </span>
+          </p>
           <p className='link'>
             <a
               href='https://markdimas.com/'
@@ -44,14 +40,9 @@ export const ListingTemplate = ({
         <span>{status.toUpperCase()}</span>
       </div>
       <div className='bottom'>
-
-
         <h2>{title}</h2>
-        <span dangerouslySetInnerHTML={{__html:description}}/>
-
+        <p dangerouslySetInnerHTML={{__html:description}}/>
         <Logo />
-
-
       </div>
     </section>
   );
@@ -59,7 +50,6 @@ export const ListingTemplate = ({
 
 const Listing = ({ data }) => {
   const { markdownRemark: listing } = data;
-  console.log(listing);
   return (
     <Layout>
       <ListingTemplate
@@ -95,7 +85,7 @@ export const pageQuery = graphql`
         status
         featuredimage {
           childImageSharp {
-            fluid(maxWidth: 4000, quality: 100) {
+            fluid(maxWidth: 2400, quality: 100) {
               ...GatsbyImageSharpFluid
               ...GatsbyImageSharpFluidLimitPresentationSize
             }

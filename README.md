@@ -2,11 +2,9 @@
 
 TODO
 
-1. Delete all markdown files in editor, and add four more.
-2. Clean up code for components
-3. Delete footer
-4. Clean Up CSS
-5. Add media queries
-6. Complete SEO Metadata
-7. Deploy
-8. Tell Jason
+1. Clean up code for components
+2. Clean Up CSS
+3. Add media queries
+4. Complete SEO Metadata
+5. Deploy
+6. Tell Jason
