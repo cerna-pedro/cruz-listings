@@ -34,7 +34,7 @@ export const ListingTemplate = ({
               target='_blank'
               rel='noopener noreferrer'
             >
-              MARKDIMAS.COM
+              MarkDimas.com
             </a>
           </p>
         </div>
@@ -44,12 +44,12 @@ export const ListingTemplate = ({
         <span>{status.toUpperCase()}</span>
       </div>
       <div className='bottom'>
-        <Logo />
-        <div className="house-info">
+
 
         <h2>{title}</h2>
         <p>{description}</p>
-        </div>
+        <Logo />
+
 
       </div>
     </section>
