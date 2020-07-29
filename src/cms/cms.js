@@ -1,5 +1,7 @@
-import CMS from 'netlify-cms-app'
+// Leaving this file in here just in case previews are added in the future.
 
-import IndexPagePreview from './preview-templates/IndexPagePreview'
+// import CMS from 'netlify-cms-app'
 
-CMS.registerPreviewTemplate('index', IndexPagePreview)
+// import IndexPagePreview from './preview-templates/IndexPagePreview'
+
+// CMS.registerPreviewTemplate('index', IndexPagePreview)

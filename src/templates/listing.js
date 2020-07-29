@@ -41,8 +41,11 @@ export const ListingTemplate = ({
         <span>{status.toUpperCase()}</span>
       </div>
       <div className='bottom'>
+        <div className="house-info">
+
         <h2>{title}</h2>
         <p dangerouslySetInnerHTML={{ __html: description }} />
+        </div>
         <Logo />
       </div>
     </section>
@@ -56,7 +59,7 @@ const Listing = ({ data }) => {
       <ListingTemplate
         description={listing.html}
         helmet={
-          <Helmet titleTemplate='%s | Blog'>
+          <Helmet titleTemplate='%s | Listing'>
             <title>{`${listing.frontmatter.title}`}</title>
             <meta
               name='description'

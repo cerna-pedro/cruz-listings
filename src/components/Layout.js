@@ -7,14 +7,13 @@ import 'typeface-amiko';
 import './layout.css';
 
 const Layout = ({ children }) => {
-  const { title, description } = useSiteMetadata();
+  const { title, description, url } = useSiteMetadata();
   return (
     <div className='container'>
       <Helmet>
         <html lang='en' />
         <title>{title}</title>
         <meta name='description' content={description} />
-
         <link
           rel='apple-touch-icon'
           sizes='180x180'
@@ -32,21 +31,18 @@ const Layout = ({ children }) => {
           href={`${withPrefix('/')}img/favicon-16x16.png`}
           sizes='16x16'
         />
-
-        <link
-          rel='mask-icon'
-          href={`${withPrefix('/')}img/safari-pinned-tab.svg`}
-          color='#ff4400'
-        />
         <meta name='theme-color' content='#fff' />
-
-        <meta property='og:type' content='business.business' />
+        <meta property='og:type' content='website' />
         <meta property='og:title' content={title} />
-        <meta property='og:url' content='/' />
+        <meta property='og:description' content={description} />
+        <meta property='og:url' content={url} />
         <meta
           property='og:image'
           content={`${withPrefix('/')}img/og-image.jpg`}
         />
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:title' content={title} />
+        <meta name='twitter:description' content={description} />
       </Helmet>
       <Navbar />
       <main>{children}</main>

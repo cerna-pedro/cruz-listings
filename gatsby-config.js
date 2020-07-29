@@ -1,13 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'Jason Cruz Listings',
     description:
-      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+      `Looking for a new home? I'm Jason Cruz, and I can help you find the home of your dreams!`,
+    url: 'https://cruz-listings.netlify.app/',
+    image: '/img/og1200x630.jpg'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     {
-      // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/static/img`,
@@ -43,10 +44,7 @@ module.exports = {
           {
             resolve: 'gatsby-remark-images',
             options: {
-              // It's important to specify the maxWidth (in pixels) of
-              // the content container as this plugin uses this as the
-              // base for generating different widths of each image.
-              maxWidth: 2048,
+              maxWidth: 2400,
             },
           },
           {
@@ -63,7 +61,7 @@ module.exports = {
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
-    }, // must be after other CSS plugins
-    'gatsby-plugin-netlify', // make sure to keep it last in the array
+    },
+    'gatsby-plugin-netlify',
   ],
 }
