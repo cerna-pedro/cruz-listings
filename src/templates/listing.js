@@ -26,12 +26,8 @@ export const ListingTemplate = ({
             <a href='tel:+1-832-768-0058'>832.768.0058</a>
           </p>
           <p className='link'>
-            <a
-              href='https://markdimas.com/'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              MarkDimas.com
+            <a className='email' href='mailto:JCruz@HiddenLeafRealty.com'>
+              JCruz@HiddenLeafRealty.com
             </a>
           </p>
         </div>
@@ -41,10 +37,9 @@ export const ListingTemplate = ({
         <span>{status.toUpperCase()}</span>
       </div>
       <div className='bottom'>
-        <div className="house-info">
-
-        <h2>{title}</h2>
-        <p dangerouslySetInnerHTML={{ __html: description }} />
+        <div className='house-info'>
+          <h2>{title}</h2>
+          <p dangerouslySetInnerHTML={{ __html: description }} />
         </div>
         <Logo />
       </div>
@@ -67,6 +62,7 @@ const Listing = ({ data }) => {
             />
           </Helmet>
         }
+        content={listing.frontmatter.description}
         title={listing.frontmatter.title}
         img={listing.frontmatter.featuredimage.childImageSharp.fluid}
         status={listing.frontmatter.status}

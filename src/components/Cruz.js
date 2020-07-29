@@ -14,7 +14,7 @@ const Cruz = () => {
       }
       mobileImage: file(relativePath: { eq: "cruz.png" }) {
         childImageSharp {
-          fixed(width: 250) {
+          fixed(width: 200) {
             ...GatsbyImageSharpFixed
           }
         }

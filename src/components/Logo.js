@@ -5,16 +5,16 @@ import Img from 'gatsby-image';
 const Logo = () => {
   const data = useStaticQuery(graphql`
     {
-      file(relativePath: { eq: "logo.jpg" }) {
+      file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
-          fixed(width: 150) {
+          fixed(width: 310) {
             ...GatsbyImageSharpFixed
           }
         }
       }
     }
   `);
-  return <Img fixed={data.file.childImageSharp.fixed} alt='Mark Dimas Properties Logo'/>;
+  return <Img fixed={data.file.childImageSharp.fixed} alt='Hidden Leaf Realty Group Logo'/>;
 };
 
 export default Logo;
