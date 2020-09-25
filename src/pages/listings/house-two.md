@@ -1,6 +1,6 @@
 ---
 templateKey: listing
-title: House Two
+title: Just Sold
 date: 2020-07-28T17:21:29.835Z
 description: Home in Houston, TX.
 status: Just Sold
