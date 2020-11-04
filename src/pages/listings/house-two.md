@@ -6,4 +6,4 @@ description: Home in Houston, TX.
 status: Just Sold
 featuredimage: /img/77096e11-467a-4006-9b32-73800f3f7525.jpeg
 ---
-Represented the Seller
+Represented the Buyer
